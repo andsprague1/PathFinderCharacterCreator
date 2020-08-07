@@ -1,0 +1,55 @@
+﻿<Window x:Class="PathFinderCharacterCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathFinderCharacterCreator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="689.407" Width="800">
+    
+    <Grid>
+
+
+        <Menu x:Name="menu" Height="Auto" Width="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <Button Name="NewClassButton" Content="New Class" BorderThickness="0" Background="#FFF0F0F0" Click="NewClassButton_Click"/>
+            <Button Name="NewAncestryButton"  BorderThickness="0" Content="  New Ancestry" Background="#FFF0F0F0" Click="NewAncestryButton_Click"/>
+            <Button Name="NewHearatageButton" BorderThickness="0" Content="  New Heritage" Background="#FFF0F0F0" Click="NewHearatageButton_Click"/>
+            <Button Name="NewBackgroundButton" BorderThickness="0" Content="  New Background" Background="#FFF0F0F0" Click="NewFeatButton_Click"/>
+            <Button Name="NewFeatButton" BorderThickness="0" Content="  New Feat" Background="#FFF0F0F0" Click="NewFeatButton_Click"/>
+            <Button Name="NewSkillButton" BorderThickness="0" Content="  New Skill" Background="#FFF0F0F0" Click="NewFeatButton_Click"/>
+        </Menu>
+        
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="214" Margin="27,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="139"/>
+        <TextBox Name="STRModifierTextBox" HorizontalAlignment="Left" Height="23" Margin="124,42,0,0" TextWrapping="Wrap" Text="1"  VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="DEXModifierTextBox" HorizontalAlignment="Left" Height="23" Margin="124,73,0,0" TextWrapping="Wrap" Text="1" IsEnabled="False" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="CONModifierTextBox" HorizontalAlignment="Left" Height="23" Margin="124,107,0,0" TextWrapping="Wrap" Text="1" IsEnabled="False" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="INTModifierTextBox" HorizontalAlignment="Left" Height="23" Margin="124,138,0,0" TextWrapping="Wrap" Text="1" IsEnabled="False" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="WISModifierTextBox" HorizontalAlignment="Left" Height="23" Margin="124,167,0,0" TextWrapping="Wrap" Text="1" IsEnabled="False" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="CHAModifierTextBox" HorizontalAlignment="Left" Height="23" Margin="124,200,0,0" TextWrapping="Wrap" Text="1" IsEnabled="False" VerticalAlignment="Top" Width="30"/>
+        <TextBox Name="StrengthTextBox" HorizontalAlignment="Left" Height="23" Margin="95,42,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.152,-0.037" TextChanged="StrengthTextBox_TextChanged"/>
+        <Label Content="STR:" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="DexterityTextBox" HorizontalAlignment="Left" Height="23" Margin="95,73,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.152,-0.037" TextChanged="DexterityTextBox_TextChanged"/>
+        <Label Content="DEX:" HorizontalAlignment="Left" Margin="40,69,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="ConstitutionTextBox" HorizontalAlignment="Left" Height="23" Margin="95,107,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.152,-0.037" TextChanged="ConstitutionTextBox_TextChanged"/>
+        <Label Content="CON:" HorizontalAlignment="Left" Margin="40,103,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="IntelligenceTextBox" HorizontalAlignment="Left" Height="23" Margin="95,138,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.152,-0.037" TextChanged="IntelligenceTextBox_TextChanged"/>
+        <Label Content="INT:" HorizontalAlignment="Left" Margin="40,134,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="WisdomTextBox" HorizontalAlignment="Left" Height="23" Margin="95,167,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.152,-0.037" TextChanged="WisdomTextBox_TextChanged"/>
+        <Label Content="WIS:" HorizontalAlignment="Left" Margin="40,163,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="CharismaTextBox" HorizontalAlignment="Left" Height="23" Margin="95,200,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.152,-0.037" TextChanged="CharismaTextBox_TextChanged"/>
+        <Label Content="CHA:" HorizontalAlignment="Left" Margin="40,196,0,0" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="107" Margin="182,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="360"/>
+        <ComboBox HorizontalAlignment="Left" Margin="266,38,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label Content="Class:" HorizontalAlignment="Left" Margin="198,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ancestry:" HorizontalAlignment="Left" Margin="198,65,0,0" VerticalAlignment="Top"/>
+        <Label Content="Heritage:" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="266,69,0,0" VerticalAlignment="Top" Width="152"/>
+        <ComboBox HorizontalAlignment="Left" Margin="266,100,0,0" VerticalAlignment="Top" Width="152"/>
+        <Grid Name="NonSkillsGrid" Background="AliceBlue" HorizontalAlignment="Left" ShowGridLines="False" Height="37" Margin="371,152,0,0" VerticalAlignment="Top" Width="171"/>
+        <Grid x:Name="SavesGrid" Background="AliceBlue" HorizontalAlignment="Left" ShowGridLines="False" Height="83" Margin="182,153,0,0" VerticalAlignment="Top" Width="171"/>
+        <Grid x:Name="SkillsGrid" Background="AliceBlue" HorizontalAlignment="Left" ShowGridLines="False" Height="484" Margin="573,152,0,0" VerticalAlignment="Top" Width="171"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="107" Margin="573,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="171"/>
+        <Label Content="Hit Points:" HorizontalAlignment="Left" Margin="594,42,0,0" VerticalAlignment="Top"/>
+        <TextBox Name ="HitPointsTextbox" HorizontalAlignment="Left" Height="23" Margin="681,46,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="-2.103,1.212"/>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="PathFinderCharacterCreator.Windows.addNewAncestryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathFinderCharacterCreator.Windows"
+        mc:Ignorable="d"
+        Title="addNewAncestryWindow" Height="366.017" Width="594.429">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="53,184,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="15"/>
+        <Label Content="Free" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.943,6.917" Width="38"/>
+        <CheckBox Name="CheckBoxStrengthBoost" Content="Strength" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxDexterityBoost" Content="Dexterity" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxConstitutionBoost" Content="Constitution" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxIntelligenceBoost" Content="Intelligence" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxWisdomBoost" Content="Wisdom" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxCharismaBoost" Content="Charisma" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxStrengthFlaw" Content="Strength" HorizontalAlignment="Left" Margin="110,60,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxDexterityFlaw" Content="Dexterity" HorizontalAlignment="Left" Margin="110,80,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxConstitutionFlaw" Content="Constitution" HorizontalAlignment="Left" Margin="110,100,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxIntelligenceFlaw" Content="Intelligence" HorizontalAlignment="Left" Margin="110,120,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxWisdomFlaw" Content="Wisdom" HorizontalAlignment="Left" Margin="110,140,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBoxCharismaFlaw" Content="Charisma" HorizontalAlignment="Left" Margin="110,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="Speed:" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxSpeed" HorizontalAlignment="Left" Height="23" Margin="61,222,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" Width="30"/>
+        <Label Content="Hit Points:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxHitPoints"  HorizontalAlignment="Left" Height="23" Margin="79,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Size: " HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBoxSize"  HorizontalAlignment="Left" Margin="61,253,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="2" >
+            <ComboBoxItem Content="Tiny"/>
+            <ComboBoxItem Content="Small"/>
+            <ComboBoxItem Content="Medium"/>
+            <ComboBoxItem Content="Large"/>
+        </ComboBox>
+        <ListBox HorizontalAlignment="Left" Height="205" Margin="216,70,0,0" VerticalAlignment="Top" Width="140"/>
+        <ListBox HorizontalAlignment="Left" Height="205" Margin="432,70,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label Content="Available Feats:" HorizontalAlignment="Left" Margin="216,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Class Feats:" HorizontalAlignment="Left" Margin="432,39,0,0" VerticalAlignment="Top"/>
+        <Button Name="ButtonAddFeat" Content=">" HorizontalAlignment="Left" Margin="361,132,0,0" VerticalAlignment="Top" Width="66"/>
+        <Button Name="ButtonRemoveFeat" Content="&lt;" HorizontalAlignment="Left" Margin="361,172,0,0" VerticalAlignment="Top" Width="66"/>
+        <Button Content="Save" x:Name="SaveButton" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click"/>
+        <CheckBox Name="checkBoxDarkVision" Content="Dark Vision" HorizontalAlignment="Left" Margin="110,224,0,0" VerticalAlignment="Top"/>
+        <Label Content="Boost" HorizontalAlignment="Left" Margin="30,29,0,0" VerticalAlignment="Top"/>
+        <Label Content="Flaw" HorizontalAlignment="Left" Margin="131,29,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
