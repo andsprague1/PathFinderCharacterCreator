@@ -1,0 +1,48 @@
+﻿<Window x:Class="PathFinderCharacterCreator.Windows.addNewSkillWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathFinderCharacterCreator.Windows"
+        mc:Ignorable="d"
+        Title="addNewSkillWindow" Height="374.791" Width="403.9">
+    <Grid>
+        <Button Content="Add Skill" Name="AddButton" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
+        <ListBox Name="skillsListBox"  HorizontalAlignment="Left" Height="324" Margin="220,10,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="skillsListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="59,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <RichTextBox Name="txtDescription" HorizontalAlignment="Left" Height="116" Margin="10,72,0,0" VerticalAlignment="Top" Width="205">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Update Skill" Name="UpdateButton" HorizontalAlignment="Left" Margin="104,314,0,0" VerticalAlignment="Top" Width="75" Click="UpdateButton_Click"/>
+        <ComboBox Name="AbilityComboBox"  HorizontalAlignment="Left" Margin="95,197,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="STR"/>
+            <ComboBoxItem Content="DEX"/>
+            <ComboBoxItem Content="CON"/>
+            <ComboBoxItem Content="WIS"/>
+            <ComboBoxItem Content="INT"/>
+            <ComboBoxItem Content="CHA"/>
+        </ComboBox>
+        <Label Content="Ability:" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top"/>
+        <Button Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="104,289,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
+
+    </Grid>
+</Window>
