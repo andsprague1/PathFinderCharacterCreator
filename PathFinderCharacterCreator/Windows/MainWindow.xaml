@@ -14,9 +14,9 @@
             <Button Name="NewClassButton" Content="New Class" BorderThickness="0" Background="#FFF0F0F0" Click="NewClassButton_Click"/>
             <Button Name="NewAncestryButton"  BorderThickness="0" Content="  New Ancestry" Background="#FFF0F0F0" Click="NewAncestryButton_Click"/>
             <Button Name="NewHearatageButton" BorderThickness="0" Content="  New Heritage" Background="#FFF0F0F0" Click="NewHearatageButton_Click"/>
-            <Button Name="NewBackgroundButton" BorderThickness="0" Content="  New Background" Background="#FFF0F0F0" Click="NewFeatButton_Click"/>
+            <Button Name="NewBackgroundButton" BorderThickness="0" Content="  New Background" Background="#FFF0F0F0" Click="NewBackgroundButton_Click" />
             <Button Name="NewFeatButton" BorderThickness="0" Content="  New Feat" Background="#FFF0F0F0" Click="NewFeatButton_Click"/>
-            <Button Name="NewSkillButton" BorderThickness="0" Content="  New Skill" Background="#FFF0F0F0" Click="NewFeatButton_Click"/>
+            <Button Name="NewSkillButton" BorderThickness="0" Content="  New Skill" Background="#FFF0F0F0" Click="NewSkillButton_Click" />
         </Menu>
         
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="214" Margin="27,22,0,0" Stroke="Black" VerticalAlignment="Top" Width="139"/>

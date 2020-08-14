@@ -1,4 +1,5 @@
-﻿using PathFinderCharacterCreator.Windows;
+﻿using Microsoft.Data.Sqlite;
+using PathFinderCharacterCreator.Windows;
 using System.IO;
 using System.Reflection.Emit;
 using System.Windows;
@@ -146,6 +147,18 @@ namespace PathFinderCharacterCreator
         {
             addNewFeatWindow newFeatWindow = new addNewFeatWindow();
             newFeatWindow.Show();
+        }
+
+        private void NewSkillButton_Click(object sender, RoutedEventArgs e)
+        {
+            addNewSkillWindow newSkillWindow = new addNewSkillWindow();
+            newSkillWindow.Show();
+        }
+
+        private void NewBackgroundButton_Click(object sender, RoutedEventArgs e)
+        {
+            addNewBackground newBackgroundWindow = new addNewBackground();
+            newBackgroundWindow.Show();
         }
     }
     
